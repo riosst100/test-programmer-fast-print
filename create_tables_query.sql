@@ -1,15 +1,15 @@
 CREATE TABLE kategori (
-    id_kategori INT PRIMARY KEY,
+    id_kategori INT PRIMARY KEY AUTO_INCREMENT,
     nama_kategori VARCHAR(100) NOT NULL
 ) ENGINE=InnoDB;
 
 CREATE TABLE status (
-    id_status INT PRIMARY KEY,
+    id_status INT PRIMARY KEY AUTO_INCREMENT,
     nama_status VARCHAR(50) NOT NULL
 ) ENGINE=InnoDB;
 
 CREATE TABLE produk (
-    id_produk INT PRIMARY KEY,
+    id_produk INT PRIMARY KEY AUTO_INCREMENT,
     nama_produk VARCHAR(150) NOT NULL,
     harga INT NOT NULL,
     kategori_id INT NOT NULL,

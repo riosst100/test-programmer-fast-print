@@ -9,7 +9,7 @@ class Produk extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Produk_model');
-        $this->load->library(['form_validation', 'session']); // pastikan session di-load
+        $this->load->library(['form_validation', 'session']);
     }
 
     // ================= List Produk =================

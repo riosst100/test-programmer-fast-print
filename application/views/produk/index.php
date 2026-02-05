@@ -17,19 +17,25 @@
         <th>Status</th>
         <th>Aksi</th>
     </tr>
-    <?php foreach($produk as $p): ?>
+    <?php if (!$produk) : ?>
         <tr>
-            <td><?= $p->nama_produk ?></td>
-            <td><?= $p->harga ?></td>
-            <td><?= $p->nama_kategori ?></td>
-            <td><?= $p->nama_status ?></td>
-            <td>
-                <a href="<?= site_url('produk/edit/'.$p->id_produk) ?>">Edit</a> |
-                <a href="<?= site_url('produk/hapus/'.$p->id_produk) ?>" 
-                onclick="return confirm('Anda yakin ingin menghapus produk &quot;<?= $p->nama_produk ?>&quot;?')">
-                    Hapus
-                </a>
-            </td>
+            <td colspan="5">Tidak ada produk.</td>
         </tr>
-    <?php endforeach ?>
+    <?php else: ?>
+        <?php foreach($produk as $p): ?>
+            <tr>
+                <td><?= $p->nama_produk ?></td>
+                <td><?= $p->harga ?></td>
+                <td><?= $p->nama_kategori ?></td>
+                <td><?= $p->nama_status ?></td>
+                <td>
+                    <a href="<?= site_url('produk/edit/'.$p->id_produk) ?>">Edit</a> |
+                    <a href="<?= site_url('produk/hapus/'.$p->id_produk) ?>" 
+                    onclick="return confirm('Anda yakin ingin menghapus produk &quot;<?= $p->nama_produk ?>&quot;?')">
+                        Hapus
+                    </a>
+                </td>
+            </tr>
+        <?php endforeach ?>
+    <?php endif; ?>
 </table>
