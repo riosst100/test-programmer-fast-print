@@ -3,3 +3,5 @@
 Nama: Rio Susanto
 Email: riosst29@gmail.com
 Whatsapp: 081385461740
+
+Video Docs: https://drive.google.com/file/d/1sIRFZshKOTdQZzo9ytvyPxbbT1KXM92D/view?usp=sharing
